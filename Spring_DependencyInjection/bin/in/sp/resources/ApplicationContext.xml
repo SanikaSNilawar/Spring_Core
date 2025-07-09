@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+     <bean class="in.sp.beans.Address" id="addr">
+        <property name="h_no"  value="123"/>
+        <property name="cityname" value="Pune"/>
+        <property name="pincode" value="411052"/>
+    </bean>
+  <bean class="in.sp.beans.Student" id="StdId">
+      <property name="Name" value="Sanika"/>
+      <property name="rollno" value="301"/>
+      <property name="address" ref="addr"/>  
+    <!-- This reference injection can be done internally by Spring container or IOC -->
+    </bean>
+</beans>
